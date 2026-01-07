@@ -1,0 +1,211 @@
+<!doctype html>
+
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profil — MUHAMAD FATIH</title>
+  <meta name="description" content="Halaman profil sederhana — foto, bio, keterampilan, proyek, dan kontak." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* dark slate */
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#06b6d4; /* teal */
+      --glass: rgba(255,255,255,0.04);
+      color-scheme: dark;
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; background:linear-gradient(180deg,var(--bg),#071024); color:#e6eef8; line-height:1.5}
+    .container{max-width:980px;margin:48px auto;padding:24px}header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo .mark{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
+nav a{color:var(--muted);text-decoration:none;margin-left:16px}
+nav a:hover{color:#fff}
+
+.hero{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:center;margin-top:28px}
+@media (max-width:880px){.hero{grid-template-columns:1fr;}.hero-right{order:-1}}
+
+.card{background:linear-gradient(180deg,var(--card),rgba(11,18,32,0.7));padding:20px;border-radius:14px;box-shadow:0 6px 18px rgba(2,6,23,0.6);backdrop-filter: blur(6px)}
+
+h1{margin:0;font-size:28px}
+.lead{color:var(--muted);margin-top:8px}
+
+.profile-photo{width:280px;height:280px;border-radius:14px;overflow:hidden;border:4px solid rgba(255,255,255,0.03)}
+.profile-photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+.stats{display:flex;gap:12px;margin-top:18px}
+.stat{background:var(--glass);padding:10px;border-radius:10px;text-align:center;min-width:80px}
+.stat b{display:block;font-size:18px}
+.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{padding:8px 10px;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted);font-size:13px}
+
+.section{margin-top:22px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (max-width:640px){.projects{grid-template-columns:1fr}}
+.project{padding:14px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02)}
+
+footer{margin-top:36px;text-align:center;color:var(--muted);font-size:14px}
+
+/* contact form */
+form{display:grid;gap:10px}
+input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+button{background:linear-gradient(90deg,var(--accent),#7c3aed);border:none;padding:10px 14px;border-radius:10px;color:#051022;font-weight:600;cursor:pointer}
+
+.socials{display:flex;gap:10px;margin-top:12px}
+.socials a{padding:8px;border-radius:8px;background:rgba(255,255,255,0.03);text-decoration:none;color:var(--muted)}
+
+/* small helper styles */
+.muted{color:var(--muted)}
+.tag{font-size:12px;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02);display:inline-block}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">NA</div>
+        <div>
+          <div style="font-weight:700">muhamad fatih</div>
+          <div class="muted" style="font-size:13px">Frontend Developer • UI/UX Enthusiast</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">Tentang</a>
+        <a href="#skills">Keterampilan</a>
+        <a href="#projects">Proyek</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </header><main class="hero">
+  <section class="card">
+    <h1>Halo — Saya <span style="color:var(--accent)">fatih</span></h1>
+    <p class="lead">Saya membuat produk digital yang sederhana, berguna, dan menyenangkan. Saat ini fokus ke pembuatan antarmuka interaktif dan pengalaman pengguna yang intuitif.</p>
+
+    <div class="stats">
+      <div class="stat"><b>5+</b><span class="muted">Tahun pengalaman</span></div>
+      <div class="stat"><b>20+</b><span class="muted">Proyek</span></div>
+      <div class="stat"><b>10+</b><span class="muted">Klien</span></div>
+    </div>
+
+    <div class="section" id="about">
+      <h3>Tentang Saya</h3>
+      <p class="muted">Saya berfokus pada pembuatan front-end modern menggunakan HTML, CSS, dan JavaScript. Suka belajar teknologi baru dan senang bekerja dalam tim kecil maupun remote.</p>
+    </div>
+
+    <div class="section" id="skills">
+      <h3>Keterampilan</h3>
+      <div class="skills">
+        <span class="chip">HTML</span>
+        <span class="chip">CSS / SCSS</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">React</span>
+        <span class="chip">Responsive Design</span>
+        <span class="chip">Figma</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Hubungi Saya</h3>
+      <div class="socials">
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+
+  </section>
+
+  <aside class="card hero-right">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+      <div class="profile-photo">
+        <!-- Ganti src dengan foto Anda -->
+        <img src="https://photos.app.goo.gl/JWdxYX8iHZsg6NEN7"alt="Foto profi">
+      </div>
+
+      <div style="width:100%">
+        <h3 class="muted" style="margin:0 0 6px 0">Kontak singkat</h3>
+        <div class="tag">📧 mf2360604@
+          gmail.com
+        </div>
+        <div style="height:10px"></div>
+        <div class="tag">📍 kp.cibening,kelurahan bendung,kec.kasemen,kota serang,indonesia</div>
+
+        <div class="section">
+          <h4 style="margin:8px 0">Unduh CV</h4>
+          <a class="tag" href="#">Download (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+</main>
+
+<section class="section" id="projects">
+  <h2>Proyek Pilihan</h2>
+  <div class="projects">
+    <div class="project card">
+      <h4>Nama Proyek 1</h4>
+      <p class="muted">deskripsi singkat proyek kesatu.saya cepat memahami cara menggunakan semua perangkat digital).</p>
+    </div>
+    <div class="project card">
+      <h4>Nama Proyek 2</h4>
+      <p class="muted">Deskripsi singkat proyek kedua.ini bukti kinerja saya sebelumnya.(gambar);)</p>
+    </div>
+    <div class="project card">
+      <h4>Nama Proyek 3</h4>
+      <p class="muted">Deskripsi singkat proyek ketiga. sebelum nya saya mampu memprogram jaringan dan membuat link html dan lain nya.</p>
+    </div>
+    <div class="project card">
+      <h4>Nama Proyek 4</h4>
+      <p class="muted">Deskripsi singkat proyek keempat.https.fatih.www.com.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h2>Kontak</h2>
+  <div class="card" style="display:grid;grid-template-columns:1fr 360px;gap:18px">
+    <div>
+      <form onsubmit="handleSubmit(event)">
+        <input type="text" id="name" placeholder="Nama" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <textarea id="message" rows="5" placeholder="Pesan Anda" required></textarea>
+        <button type="submit">Kirim Pesan</button>
+        <p id="formResult" class="muted" style="margin-top:8px"></p>
+      </form>
+    </div>
+    <div>
+      <h4>Alamat</h4>
+      <p class="muted">Kota serang<br>indinesia<br>kp.cibening</p>
+
+      <h4 style="margin-top:12px">Jam Kerja</h4>
+      <p class="muted">Senin — Jumat, 09:00 — 17:00</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© <span id="year"></span> muhamad fatih — Dibuat dengan ❤️</p>
+</footer>
+
+  </div>  <script>
+    // Simple JS untuk demo: menampilkan tahun dan menangani form (tidak mengirim apa-apa di server)
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const res = document.getElementById('formResult');
+      if(!name||!email||!message){res.textContent='Mohon lengkapi semua bidang.';return}
+      // Pada implementasi nyata: kirim data ke endpoint atau email service
+      res.textContent = 'Terima kasih, pesan Anda sudah dicatat (demo).';
+      e.target.reset();
+    }
+  </script></body>
+</html>
